@@ -46,7 +46,6 @@ def is_in_time_interval(time_interval: tuple[str], time: datetime) -> bool:
     
     init_time = datetime.strptime(time_interval[0], "%H:%M")
     end_time = datetime.strptime(time_interval[1], "%H:%M")
-    # logging.debug(f"init: {init_time} end: {end_time} time: {time} RESULT: {init_time <= time <= end_time}")
     return init_time <= time <= end_time
 
 

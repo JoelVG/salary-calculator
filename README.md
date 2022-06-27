@@ -1,10 +1,9 @@
 # Salary calculator
-## Python >= 3.7.* required
+## Python >= 3.7.* required  
 
 ## Solution
-Metodology: TDD.
-Explanaition: 
-The `main.py` file contains all the functions that I use for this solution.
+**Metodology**: TDD.  
+**Explanaition**: The **main.py** file contains all the functions that I use for this solution.
 
 - `process_data(file_name:str="data.txt)`: Process the data from **data.txt** or the file that was passed in the format that
 the problem show. e.g. RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00
@@ -25,14 +24,14 @@ specific worker.
 - `is_in_time_interval(time_interval: tuple[str], time: datetime) -> bool`: Function that returns a True
 if the **time** is in the interval of **time_interval** of False if not.
 
-- `get_rate(init_time: datetime, end_time: datetime, payment: dict)`: Function that returns the
-payment rate for an specific interval of time (init_time and end_time).
-In this method We have two diferent cases:
-- CASE 1: If the interval of time (init_time and end_time) is in only one of the interval
-that the problem give us. Return the payment rate for this interval of time.
+- `get_payment(init_time: datetime, end_time: datetime, pay: dict, hours: float) -> float:`: Function that returns the
+payment for an specific interval of time (**init_time** and **end_time**).
+In this method we have two diferent cases:
+- CASE 1: If the interval of time (**init_time** and **end_time**) is in only one of the interval
+that the problem give us. Return the payment for this interval of time.
 - CASE 2: If the interval of time (init_time and end_time) is more than one of the interval
-that the problem give us. The function calculates for the two period of times and returns a tuple
-that contains a flag and the total of the pay rate for each interval of time. e.g.
+that the problem give us. The function calculates for the two period of times. e.g.  
+
 data = LOREM=MO10:00-19:00,SA17:00-23:00
 For monday:
 - from 10:00 to 18:00: 8h x 15usd/h = 140USD
@@ -41,12 +40,12 @@ For saturday:
 - from 17:00 to 18:00: 1h x 20usd/h = 20USD
 - from 18:01 to 23:00: 5h x 25usd/h = 125USD 
 
-TOTAL: 305USD
+TOTAL: 305 USD
 
 
-The `constnts.py` file contains all the contants that I use for the solution of this problem.
+`constants.py` file that contains all the constants that I to define the solution of this problem.
 
-The `tests.py` file contains all the tests that I use to test all my functions and use the data
+`tests.py` file that contains all the tests that I use to test all the functions and use the data
 from **fixtures.txt** file.
 
 ## Run
